@@ -7,13 +7,26 @@
 
 import UIKit
 import FacebookLogin
+import AuthenticationServices
 
 class LogInViewController: UIViewController {
     
     @IBOutlet weak var facebookBtn: UIButton!
+    @IBOutlet weak var signInWithAppleButtonView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Apple Login
+        
+        let authorizationAppleIDButton: ASAuthorizationAppleIDButton = ASAuthorizationAppleIDButton()
+        authorizationAppleIDButton.addTarget(self, action: #selector(pressSignInWithAppleButton), for: UIControl.Event.touchUpInside)
+        
+        authorizationAppleIDButton.frame = self.signInWithAppleButtonView.bounds
+        self.signInWithAppleButtonView.addSubview(authorizationAppleIDButton)
+        
+        
+        // Facebook Login
         if let accessToken = AccessToken.current,
            !accessToken.isExpired {
             print("\(accessToken.userID) login")
@@ -29,20 +42,33 @@ class LogInViewController: UIViewController {
         }
         
         
-        if let _ = AccessToken.current {
-            Profile.loadCurrentProfile { profile, error in
-                if let profile = profile {
-                    print(profile.name)
-                    print(profile.imageURL(forMode: .square, size: CGSize(width: 300, height: 300)))
-                }
-            }
-        }
-        // 使用「Facebook 登入」時，您的應用程式可以要求提供有關個人資料子集的權限。
-        //「Facebook 登入」需要進階 public_profile 權限，才能由外部用戶使用。
-        //        facebookBtn.permissions = ["public_profile", "email"]
+        // 檢查User 是否已使用 Apple 登入
+//        checkCredentialStateWithApple(withUserID: <#T##String#>)
+        // 監聽 Apple ID 是否有登入、登出的狀況
+        self.observeAppleIDSessionChanges()
+        
+        
+        // 檢查User 是否已使用 Facebook 登入
+        checkCredentialStateWithFacebook()
+        
         
     }
     
+    
+    /// 點擊 Sign In with Apple 按鈕後，請求授權
+    @objc func pressSignInWithAppleButton() {
+        let authorizationAppleIDRequest: ASAuthorizationAppleIDRequest = ASAuthorizationAppleIDProvider().createRequest()
+        authorizationAppleIDRequest.requestedScopes = [.fullName, .email]
+        
+        let controller: ASAuthorizationController = ASAuthorizationController(authorizationRequests: [authorizationAppleIDRequest])
+        
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        
+        controller.performRequests()
+    }
+    
+    /// 點擊facebook Login
     @IBAction func facebookLogIn(_ sender: Any) {
         let manager = LoginManager()
         manager.logIn(permissions: [.publicProfile, .email]) { result in
@@ -55,17 +81,98 @@ class LogInViewController: UIViewController {
                 print("failed")
             }
         }
+    }
+    
+    
+    private func checkCredentialStateWithApple(withUserID userID: String) {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        appleIDProvider.getCredentialState(forUserID: userID) { (credentialState, error) in
+            switch credentialState {
+            case .authorized:
+                print("用戶已登入")
+                break
+            case .revoked:
+                print("用戶已登出")
+                break
+            case .notFound:
+                print("無此用戶")
+                break;
+            default:
+                break
+            }
+        }
+    }
+    
+    private func checkCredentialStateWithFacebook(){
+        if let _ = AccessToken.current {
+            Profile.loadCurrentProfile { profile, error in
+                if let profile = profile {
+                    print(profile.name as? String)
+                    print(profile.imageURL(forMode: .square, size: CGSize(width: 300, height: 300)))
+                }
+            }
+        }
+    }
+    
+}
+
+
+// 遵從 ASAuthorizationControllerDelegate(實作登入成功、失敗的邏輯)
+extension LogInViewController: ASAuthorizationControllerDelegate {
+    /// 授權成功
+    /// - Parameters:
+    ///   - controller: _
+    ///   - authorization: _
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            print("user: \(appleIDCredential.user)")
+            print("fullName: \(String(describing: appleIDCredential.fullName))")
+            print("Email: \(String(describing: appleIDCredential.email))")
+            print("realUserStatus: \(String(describing: appleIDCredential.realUserStatus))")
+        }
+    }
+    
+    /// 授權失敗
+    /// - Parameters:
+    ///   - controller: _
+    ///   - error: _
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        
+        switch (error) {
+        case ASAuthorizationError.canceled:
+            break
+        case ASAuthorizationError.failed:
+            break
+        case ASAuthorizationError.invalidResponse:
+            break
+        case ASAuthorizationError.notHandled:
+            break
+        case ASAuthorizationError.unknown:
+            break
+        default:
+            break
         }
         
-        
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
-        
+        print("didCompleteWithError: \(error.localizedDescription)")
     }
+    
+    // 監聽 Apple ID 是否有登入、登出的狀況
+    private func observeAppleIDSessionChanges() {
+        NotificationCenter.default.addObserver(forName: ASAuthorizationAppleIDProvider.credentialRevokedNotification, object: nil, queue: nil) { (notification: Notification) in
+            // Sign user in or out
+            print("Sign user in or out...")
+      }
+    }
+    
+}
+
+// 遵從 ASAuthorizationControllerPresentationContextProviding(告知 ASAuthorizationController 該呈現在哪個 Window 上)
+extension LogInViewController: ASAuthorizationControllerPresentationContextProviding {
+        
+    /// - Parameter controller: _
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+           return self.view.window!
+    }
+        
+}
