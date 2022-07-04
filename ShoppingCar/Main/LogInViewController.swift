@@ -18,15 +18,6 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Apple Login
-        
-        let authorizationAppleIDButton: ASAuthorizationAppleIDButton = ASAuthorizationAppleIDButton()
-        authorizationAppleIDButton.addTarget(self, action: #selector(pressSignInWithAppleButton), for: UIControl.Event.touchUpInside)
-        
-        authorizationAppleIDButton.frame = self.signInWithAppleButtonView.bounds
-        self.signInWithAppleButtonView.addSubview(authorizationAppleIDButton)
-        
-        
         // Facebook Login
         if let accessToken = AccessToken.current,
            !accessToken.isExpired {
@@ -57,6 +48,19 @@ class LogInViewController: UIViewController {
     
     
     /// 點擊 Sign In with Apple 按鈕後，請求授權
+    
+    @IBAction func signInWithApple(_ sender: Any) {
+        let authorizationAppleIDRequest: ASAuthorizationAppleIDRequest = ASAuthorizationAppleIDProvider().createRequest()
+        authorizationAppleIDRequest.requestedScopes = [.fullName, .email]
+        
+        let controller: ASAuthorizationController = ASAuthorizationController(authorizationRequests: [authorizationAppleIDRequest])
+        
+        controller.delegate = self
+        controller.presentationContextProvider = self
+        
+        controller.performRequests()
+        
+    }
     @objc func pressSignInWithAppleButton() {
         let authorizationAppleIDRequest: ASAuthorizationAppleIDRequest = ASAuthorizationAppleIDProvider().createRequest()
         authorizationAppleIDRequest.requestedScopes = [.fullName, .email]

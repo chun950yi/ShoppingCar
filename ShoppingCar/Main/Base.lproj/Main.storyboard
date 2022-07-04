@@ -43,7 +43,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="UuL-gz-eSJ">
-                                <rect key="frame" x="154.33333333333334" y="566" width="81.333333333333343" height="64"/>
+                                <rect key="frame" x="154.33333333333334" y="481.33333333333326" width="81.333333333333343" height="64"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KST-Wn-8M7">
                                         <rect key="frame" x="0.0" y="0.0" width="81.333333333333329" height="31"/>
@@ -51,7 +51,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="立即登入"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pep-F4-c8i">
-                                        <rect key="frame" x="0.0" y="33" width="81.333333333333329" height="31"/>
+                                        <rect key="frame" x="0.0" y="33.000000000000057" width="81.333333333333329" height="31"/>
                                         <color key="tintColor" systemColor="secondaryLabelColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="隨便逛逛"/>
@@ -63,40 +63,47 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="前往註冊"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="9YD-wc-NH3">
-                                <rect key="frame" x="30" y="718" width="330" height="17"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="9YD-wc-NH3">
+                                <rect key="frame" x="30" y="714" width="330" height="24"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJb-lE-vdJ">
-                                        <rect key="frame" x="0.0" y="8" width="106.66666666666667" height="1"/>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="xJb-lE-vdJ">
+                                        <rect key="frame" x="0.0" y="11.666666666666629" width="112.33333333333333" height="1"/>
                                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="lSS-W0-4hn"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" text="第三方登入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oy5-HS-vRp">
-                                        <rect key="frame" x="131.66666666666666" y="0.0" width="71.333333333333343" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="第三方登入" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oy5-HS-vRp">
+                                        <rect key="frame" x="127.33333333333334" y="3.6666666666666288" width="71.666666666666657" height="17"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="71.670000000000002" id="ReV-uH-eQL"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="tertiaryLabelColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFt-TN-S3I">
-                                        <rect key="frame" x="228" y="8" width="102" height="1"/>
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="yFt-TN-S3I">
+                                        <rect key="frame" x="214" y="11.666666666666629" width="116" height="1"/>
                                         <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="b7q-zc-72N"/>
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="xJb-lE-vdJ" firstAttribute="width" secondItem="9YD-wc-NH3" secondAttribute="width" multiplier="0.340404" priority="999" id="7NR-t5-YYv"/>
+                                    <constraint firstAttribute="height" constant="24" id="N5O-kt-csT"/>
+                                    <constraint firstItem="yFt-TN-S3I" firstAttribute="width" secondItem="xJb-lE-vdJ" secondAttribute="width" multiplier="1.03264" id="SIH-f4-Dz3"/>
+                                </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="oHj-eW-HgN">
-                                <rect key="frame" x="97.666666666666686" y="765" width="195" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="oHj-eW-HgN">
+                                <rect key="frame" x="95" y="754" width="200" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2Z-LQ-pRm">
-                                        <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2Z-LQ-pRm">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="hN2-ma-jQm"/>
-                                            <constraint firstAttribute="width" secondItem="F2Z-LQ-pRm" secondAttribute="height" multiplier="1:1" id="wGx-Hw-aZn"/>
+                                            <constraint firstAttribute="width" constant="40" id="YW9-Od-Kko"/>
                                         </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="googleLogo"/>
@@ -105,29 +112,29 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="395-rk-V98">
-                                        <rect key="frame" x="79.999999999999986" y="0.0" width="35" height="35"/>
+                                        <rect key="frame" x="80" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="PGj-eX-Pfa"/>
-                                            <constraint firstAttribute="width" secondItem="395-rk-V98" secondAttribute="height" id="iUN-SS-seT"/>
-                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="appleLogo"/>
+                                        <connections>
+                                            <action selector="signInWithApple:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ROK-dR-dtb"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euk-pe-Qjl">
-                                        <rect key="frame" x="160" y="0.0" width="35" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euk-pe-Qjl">
+                                        <rect key="frame" x="160" y="0.0" width="40" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="35" id="5I4-59-RtJ"/>
-                                            <constraint firstAttribute="width" secondItem="euk-pe-Qjl" secondAttribute="height" id="c6O-QW-EXy"/>
-                                        </constraints>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="facebookLogo"/>
+                                        <state key="normal" image="facebookLogo"/>
                                         <connections>
                                             <action selector="facebookLogIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tUL-Ci-xrO"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Bmd-R3-5bX"/>
+                                    <constraint firstItem="euk-pe-Qjl" firstAttribute="width" secondItem="395-rk-V98" secondAttribute="width" id="KBx-aU-Smd"/>
+                                    <constraint firstItem="395-rk-V98" firstAttribute="width" secondItem="F2Z-LQ-pRm" secondAttribute="width" id="aQA-2j-fHQ"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Wqh-dR-PEj">
                                 <rect key="frame" x="138" y="426.33333333333331" width="114.33333333333331" height="31"/>
@@ -143,63 +150,53 @@
                                     </switch>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-ud-uuf">
-                                <rect key="frame" x="-4" y="255.33333333333337" width="398" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vbT-ud-uuf">
+                                <rect key="frame" x="16" y="255.33333333333337" width="358" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUA-bL-2UB">
-                                        <rect key="frame" x="0.0" y="0.0" width="110" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="郵箱登入"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ul3-sl-VpW">
-                                        <rect key="frame" x="144" y="0.0" width="110" height="31"/>
+                                        <rect key="frame" x="109.00000000000001" y="0.0" width="136.33333333333337" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="帳號密碼登入"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e73-wO-scp">
-                                        <rect key="frame" x="288" y="0.0" width="110" height="31"/>
+                                        <rect key="frame" x="253.33333333333329" y="0.0" width="104.66666666666666" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="手機登入"/>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="18z-Nd-XUS">
-                                <rect key="frame" x="70" y="654" width="250" height="40"/>
-                                <color key="backgroundColor" systemColor="systemGray2Color"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="8eb-j6-HuE"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wqh-dR-PEj" firstAttribute="top" secondItem="O1G-22-8F8" secondAttribute="bottom" constant="16" id="6K8-ci-Qvz"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9YD-wc-NH3" secondAttribute="trailing" constant="30" id="B2B-kx-HNP"/>
+                            <constraint firstItem="vbT-ud-uuf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Cs5-UD-bQ5"/>
                             <constraint firstItem="Wqh-dR-PEj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DmJ-Eq-lLY"/>
-                            <constraint firstItem="9YD-wc-NH3" firstAttribute="top" secondItem="18z-Nd-XUS" secondAttribute="bottom" constant="24" id="GxH-pC-6oo"/>
-                            <constraint firstItem="oHj-eW-HgN" firstAttribute="top" secondItem="9YD-wc-NH3" secondAttribute="bottom" constant="30" id="Jsr-og-L8b"/>
+                            <constraint firstItem="oHj-eW-HgN" firstAttribute="top" secondItem="9YD-wc-NH3" secondAttribute="bottom" constant="16" id="Jsr-og-L8b"/>
                             <constraint firstItem="vbT-ud-uuf" firstAttribute="top" secondItem="84v-oV-N3g" secondAttribute="bottom" constant="24" id="Klq-Ev-e91"/>
                             <constraint firstItem="84v-oV-N3g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="O3t-oA-UtT"/>
                             <constraint firstItem="9YD-wc-NH3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="PS3-zl-bIe"/>
                             <constraint firstItem="O1G-22-8F8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="SIg-Kb-0hT"/>
                             <constraint firstItem="oHj-eW-HgN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U4O-on-6od"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oHj-eW-HgN" secondAttribute="bottom" constant="10" id="WR3-v9-sD7"/>
-                            <constraint firstItem="vbT-ud-uuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XbA-uH-OAE"/>
-                            <constraint firstItem="18z-Nd-XUS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="b7D-n2-dqi"/>
+                            <constraint firstAttribute="trailing" secondItem="vbT-ud-uuf" secondAttribute="trailing" constant="16" id="UEG-6y-1ND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oHj-eW-HgN" secondAttribute="bottom" constant="16" id="WR3-v9-sD7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O1G-22-8F8" secondAttribute="trailing" constant="64" id="bmq-N2-dpI"/>
                             <constraint firstItem="UuL-gz-eSJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fUO-SE-OJ4"/>
-                            <constraint firstItem="18z-Nd-XUS" firstAttribute="top" secondItem="UuL-gz-eSJ" secondAttribute="bottom" constant="24" id="hDp-Jr-m4P"/>
                             <constraint firstItem="O1G-22-8F8" firstAttribute="top" secondItem="vbT-ud-uuf" secondAttribute="bottom" constant="32" id="hdg-H7-gkG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dnx-mJ-R1e" secondAttribute="trailing" constant="16" id="l2k-aw-ANQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="18z-Nd-XUS" secondAttribute="trailing" constant="70" id="mlT-bK-kCz"/>
                             <constraint firstItem="Dnx-mJ-R1e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="okv-By-U3D"/>
                             <constraint firstItem="84v-oV-N3g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAc-Gk-UOs"/>
+                            <constraint firstItem="UuL-gz-eSJ" firstAttribute="top" secondItem="Wqh-dR-PEj" secondAttribute="bottom" constant="24" id="xOy-tu-7Uy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="facebookBtn" destination="euk-pe-Qjl" id="9Ul-dg-AO1"/>
-                        <outlet property="signInWithAppleButtonView" destination="18z-Nd-XUS" id="ehA-5T-YJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -363,9 +360,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
