@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9111BA6F2872B4C800B3B51C /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9111BA6E2872B4C800B3B51C /* FacebookCore */; };
+		9111BA712872B4C800B3B51C /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 9111BA702872B4C800B3B51C /* FacebookLogin */; };
+		9111BA732872B4C800B3B51C /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 9111BA722872B4C800B3B51C /* FacebookShare */; };
 		9124D73C2861AFE2001297A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124D73B2861AFE2001297A4 /* AppDelegate.swift */; };
 		9124D73E2861AFE2001297A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9124D73D2861AFE2001297A4 /* SceneDelegate.swift */; };
 		9124D7432861AFE2001297A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9124D7412861AFE2001297A4 /* Main.storyboard */; };
 		9124D7452861AFE3001297A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9124D7442861AFE3001297A4 /* Assets.xcassets */; };
 		9124D7482861AFE3001297A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9124D7462861AFE3001297A4 /* LaunchScreen.storyboard */; };
+		9164B5162872C4D700DC7B65 /* client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9164B5152872C4D700DC7B65 /* client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist */; };
 		91E496D4286E0631008F14B6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E496D3286E0631008F14B6 /* SignUpViewController.swift */; };
 		91E496D6286E063C008F14B6 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E496D5286E063C008F14B6 /* LogInViewController.swift */; };
 		91E496D8286E064B008F14B6 /* ForgetPSWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E496D7286E064B008F14B6 /* ForgetPSWViewController.swift */; };
 		91E496DA286E0666008F14B6 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E496D9286E0666008F14B6 /* HomePageViewController.swift */; };
-		91E496E4286E10A9008F14B6 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 91E496E3286E10A9008F14B6 /* FacebookCore */; };
-		91E496E6286E10A9008F14B6 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 91E496E5286E10A9008F14B6 /* FacebookLogin */; };
-		91E496E8286E10A9008F14B6 /* FacebookShare in Frameworks */ = {isa = PBXBuildFile; productRef = 91E496E7286E10A9008F14B6 /* FacebookShare */; };
+		A14F499F800F8EB8248D3E1A /* Pods_ShoppingCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 110B502B71BAD755092D7594 /* Pods_ShoppingCar.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		110B502B71BAD755092D7594 /* Pods_ShoppingCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShoppingCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9124D7382861AFE2001297A4 /* ShoppingCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9124D73B2861AFE2001297A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9124D73D2861AFE2001297A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,11 +32,14 @@
 		9124D7442861AFE3001297A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9124D7472861AFE3001297A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9124D7492861AFE3001297A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9164B5152872C4D700DC7B65 /* client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 		91C34386286D9837005D9404 /* ShoppingCar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ShoppingCar.entitlements; sourceTree = "<group>"; };
 		91E496D3286E0631008F14B6 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		91E496D5286E063C008F14B6 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		91E496D7286E064B008F14B6 /* ForgetPSWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPSWViewController.swift; sourceTree = "<group>"; };
 		91E496D9286E0666008F14B6 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		A0465C4040BED0C4CDEB36C3 /* Pods-ShoppingCar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingCar.release.xcconfig"; path = "Target Support Files/Pods-ShoppingCar/Pods-ShoppingCar.release.xcconfig"; sourceTree = "<group>"; };
+		B14E833B07D071D284276A21 /* Pods-ShoppingCar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShoppingCar.debug.xcconfig"; path = "Target Support Files/Pods-ShoppingCar/Pods-ShoppingCar.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,20 +47,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E496E6286E10A9008F14B6 /* FacebookLogin in Frameworks */,
-				91E496E4286E10A9008F14B6 /* FacebookCore in Frameworks */,
-				91E496E8286E10A9008F14B6 /* FacebookShare in Frameworks */,
+				A14F499F800F8EB8248D3E1A /* Pods_ShoppingCar.framework in Frameworks */,
+				9111BA6F2872B4C800B3B51C /* FacebookCore in Frameworks */,
+				9111BA732872B4C800B3B51C /* FacebookShare in Frameworks */,
+				9111BA712872B4C800B3B51C /* FacebookLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7791ABA5D234BABAD65685CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				110B502B71BAD755092D7594 /* Pods_ShoppingCar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7982C6EBFDCB8A13DD19601F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B14E833B07D071D284276A21 /* Pods-ShoppingCar.debug.xcconfig */,
+				A0465C4040BED0C4CDEB36C3 /* Pods-ShoppingCar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9124D72F2861AFE2001297A4 = {
 			isa = PBXGroup;
 			children = (
 				9124D73A2861AFE2001297A4 /* ShoppingCar */,
 				9124D7392861AFE2001297A4 /* Products */,
+				7982C6EBFDCB8A13DD19601F /* Pods */,
+				7791ABA5D234BABAD65685CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +95,7 @@
 		9124D73A2861AFE2001297A4 /* ShoppingCar */ = {
 			isa = PBXGroup;
 			children = (
+				9164B5152872C4D700DC7B65 /* client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist */,
 				91C34386286D9837005D9404 /* ShoppingCar.entitlements */,
 				9124D73B2861AFE2001297A4 /* AppDelegate.swift */,
 				9124D73D2861AFE2001297A4 /* SceneDelegate.swift */,
@@ -99,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9124D74C2861AFE3001297A4 /* Build configuration list for PBXNativeTarget "ShoppingCar" */;
 			buildPhases = (
+				A410A18223B3B35D4E34C11E /* [CP] Check Pods Manifest.lock */,
 				9124D7342861AFE2001297A4 /* Sources */,
 				9124D7352861AFE2001297A4 /* Frameworks */,
 				9124D7362861AFE2001297A4 /* Resources */,
+				7AC6EFBF76BDE97B1DA0DFBB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,9 +138,9 @@
 			);
 			name = ShoppingCar;
 			packageProductDependencies = (
-				91E496E3286E10A9008F14B6 /* FacebookCore */,
-				91E496E5286E10A9008F14B6 /* FacebookLogin */,
-				91E496E7286E10A9008F14B6 /* FacebookShare */,
+				9111BA6E2872B4C800B3B51C /* FacebookCore */,
+				9111BA702872B4C800B3B51C /* FacebookLogin */,
+				9111BA722872B4C800B3B51C /* FacebookShare */,
 			);
 			productName = ShoppingCar;
 			productReference = 9124D7382861AFE2001297A4 /* ShoppingCar.app */;
@@ -142,7 +171,7 @@
 			);
 			mainGroup = 9124D72F2861AFE2001297A4;
 			packageReferences = (
-				91E496E2286E10A9008F14B6 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				9111BA6D2872B4C800B3B51C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 			);
 			productRefGroup = 9124D7392861AFE2001297A4 /* Products */;
 			projectDirPath = "";
@@ -160,11 +189,54 @@
 			files = (
 				9124D7482861AFE3001297A4 /* LaunchScreen.storyboard in Resources */,
 				9124D7452861AFE3001297A4 /* Assets.xcassets in Resources */,
+				9164B5162872C4D700DC7B65 /* client_911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com.plist in Resources */,
 				9124D7432861AFE2001297A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7AC6EFBF76BDE97B1DA0DFBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShoppingCar/Pods-ShoppingCar-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShoppingCar/Pods-ShoppingCar-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShoppingCar/Pods-ShoppingCar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A410A18223B3B35D4E34C11E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShoppingCar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9124D7342861AFE2001297A4 /* Sources */ = {
@@ -318,6 +390,7 @@
 		};
 		9124D74D2861AFE3001297A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B14E833B07D071D284276A21 /* Pods-ShoppingCar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -347,6 +420,7 @@
 		};
 		9124D74E2861AFE3001297A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A0465C4040BED0C4CDEB36C3 /* Pods-ShoppingCar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,30 +472,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		91E496E2286E10A9008F14B6 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+		9111BA6D2872B4C800B3B51C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 13.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		91E496E3286E10A9008F14B6 /* FacebookCore */ = {
+		9111BA6E2872B4C800B3B51C /* FacebookCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91E496E2286E10A9008F14B6 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 9111BA6D2872B4C800B3B51C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookCore;
 		};
-		91E496E5286E10A9008F14B6 /* FacebookLogin */ = {
+		9111BA702872B4C800B3B51C /* FacebookLogin */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91E496E2286E10A9008F14B6 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 9111BA6D2872B4C800B3B51C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
 		};
-		91E496E7286E10A9008F14B6 /* FacebookShare */ = {
+		9111BA722872B4C800B3B51C /* FacebookShare */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 91E496E2286E10A9008F14B6 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			package = 9111BA6D2872B4C800B3B51C /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookShare;
 		};
 /* End XCSwiftPackageProductDependency section */

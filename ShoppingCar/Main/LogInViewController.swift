@@ -8,6 +8,7 @@
 import UIKit
 import FacebookLogin
 import AuthenticationServices
+import GoogleSignIn
 
 class LogInViewController: UIViewController {
     
@@ -67,6 +68,44 @@ class LogInViewController: UIViewController {
         
         controller.performRequests()
     }
+    
+    /// Google SignIn
+    @IBAction func signinWithGoogle(_ sender: Any) {
+        
+        let signInConfig = GIDConfiguration(clientID: "911927736412-hae293jc8qbc91l1c89o6urtb5o538td.apps.googleusercontent.com")
+        
+        GIDSignIn.sharedInstance.signIn(
+            with: signInConfig,
+            presenting: self
+        ) { user, error in
+            guard error == nil else { return }
+            guard let user = user else { return }
+            
+            print("Your user is signed in!")
+            // Google: Getting profile information
+            let emailAddress = user.profile?.email
+            
+            let fullName = user.profile?.name
+//            let givenName = user.profile?.givenName
+//            let familyName = user.profile?.familyName
+//
+//            let profilePicUrl = user.profile?.imageURL(withDimension: 320)
+            
+            print("Google Email: \( String(describing: emailAddress))")
+            print("full Name: \(String(describing: fullName))")
+            
+            // Google: Send the ID token to your server
+            user.authentication.do { authentication, error in
+                guard error == nil else { return }
+                guard let authentication = authentication else { return }
+                
+                #warning("Send ID token to backend (example below).")
+//                let idToken = authentication.idToken
+                
+            }
+        }
+    }
+    
     
     /// 點擊facebook Login
     @IBAction func facebookLogIn(_ sender: Any) {
